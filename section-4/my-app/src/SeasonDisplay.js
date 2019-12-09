@@ -1,32 +1,10 @@
 import React from 'react';
 import Loader from './Loader';
-import './SeasonDisplay.scss'
-
-const seasonConfig = {
-    summer: {
-        text: 'Season: Summer',
-        iconName: 'sun',
-        background: 'summer'
-    },
-    winter: {
-        text: 'Season: Winter',
-        iconName: 'snowflake',
-        background: 'winter'
-    }
-}
-
-const getSeason = (lat, month) =>{
-    if(month > 2 && month <9){
-        return lat > 0 ? 'summer' : 'winter';
-    }else{
-        return lat > 0 ? 'winter' : 'summer';
-    }
-}
+import './SeasonDisplay.scss';
 
 const SeasonDisplay = (props) => {
 
     const season = getSeason(props.lat, new Date().getMonth());
-
     const {text, iconName, background} = seasonConfig[season];
 
 
@@ -52,5 +30,29 @@ const SeasonDisplay = (props) => {
         );
     }
 }
+
+
+const seasonConfig = {
+    summer: {
+        text: 'Season: Summer',
+        iconName: 'sun',
+        background: 'summer'
+    },
+    winter: {
+        text: 'Season: Winter',
+        iconName: 'snowflake',
+        background: 'winter'
+    }
+}
+
+const getSeason = (lat, month) =>{
+    if(month > 2 && month <9){
+        return lat > 0 ? 'summer' : 'winter';
+    }else{
+        return lat > 0 ? 'winter' : 'summer';
+    }
+}
+
+
 
 export default SeasonDisplay;

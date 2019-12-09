@@ -25,10 +25,12 @@ class App extends React.Component {
 
     render(){
         return(
-            <SeasonDisplay
+            <div className="border red">
+                <SeasonDisplay
                 lat = {this.state.lat}
                 error = {this.state.errorMessage}
-            />
+                />
+            </div>
         );  
     }
 }

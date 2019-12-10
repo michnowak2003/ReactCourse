@@ -37,6 +37,7 @@ class ImageCard extends React.Component{
                 className='images-list__image'
                 />
             </div>
+            
         )
     }
 }

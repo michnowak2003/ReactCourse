@@ -1,0 +1,12 @@
+.section{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2em;
+
+    &__player{
+        flex-basis: 60%;
+    }
+    &__others{
+        flex-basis: 40%;
+    }
+}

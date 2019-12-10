@@ -1,0 +1,20 @@
+.videos-item{
+    display: flex;
+    align-items: center;
+    transition: all .5s ease-in-out;
+    border-radius: 1em;
+    margin-bottom: 1em;
+    cursor: pointer;
+    flex-wrap: nowrap;
+    height: 100px;
+
+    &:hover{
+        background-color: rgba($color: #000000, $alpha: .1)   
+    }
+    
+    &__image{
+        border-radius: 1em;
+        margin-right: 1em;
+        max-width: 180px;
+    }
+}
